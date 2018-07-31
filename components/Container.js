@@ -7,48 +7,26 @@ import AddDeck from './AddDeck';
 
 export default createBottomTabNavigator(
     {
-        Home: { screen: StackNavigationCard,
-            navigationOptions: {
-                tabBarLabel: 'Home',
-                tabBarIcon: ({ tintColor }) => <Ionicons name='ios-home' size={30} color={tintColor} />
-            },},
-        AddDeck: { screen: AddDeck,
-            navigationOptions: {
-                tabBarLabel: 'Add Deck',
-                tabBarIcon: ({ tintColor }) => <FontAwesome name='plus-square' size={30} color={tintColor} />
-            },
-        },
-    }, /*{
-        navigationOptions: ({navigation}) => ({
-            tabBarIcon: ({focused, tintColor}) => {
-                const {routeName} = navigation.state;
+        Home: StackNavigationCard,
+        AddDeck: AddDeck,
+    },
+    {
+        navigationOptions: ({ navigation }) => ({
+            tabBarIcon: ({ focused, tintColor }) => {
+                const { routeName } = navigation.state;
                 let iconName;
                 if (routeName === 'Home') {
-                    iconName = `ios-information-circle${focused ? '' : '-outline'}`;
+                    iconName = `ios-home${focused ? '' : '-outline'}`;
+                    return <Ionicons name={iconName} size={25} color={tintColor} />;
                 } else if (routeName === 'AddDeck') {
-                    iconName = `ios-options${focused ? '' : '-outline'}`;
+                    iconName = `plus-square${focused ? '' : '-o'}`;
+                    return <FontAwesome name={iconName} size={25} color={tintColor} />;
                 }
-
-                // You can return any component that you like here! We usually use an
-                // icon component from react-native-vector-icons
-                return <Ionicons name={iconName} size={25} color={tintColor}/>;
             },
-        })
-    },*/
-    {
+        }),
         tabBarOptions: {
-            activeTintColor: 'blue',
-            style: {
-                height: 56,
-                backgroundColor: 'white',
-                shadowColor: 'rgba(0, 0, 0, 0.24)',
-                shadowOffset: {
-                    width: 0,
-                    height: 3
-                },
-                shadowRadius: 6,
-                shadowOpacity: 1
-            }
-        }
+            activeTintColor: 'tomato',
+            inactiveTintColor: 'gray',
+        },
     }
 );

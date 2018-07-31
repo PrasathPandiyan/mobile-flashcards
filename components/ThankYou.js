@@ -39,7 +39,7 @@ export default class ThankYou extends React.Component {
                     <TouchableOpacity
                         style={styles.btn1}
                         onPress={this.restartQuiz}>
-                        <Text style={styles.submitBtnText}>Restart Quiz</Text>
+                        <Text style={styles.submitBtnText1}>Restart Quiz</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.btn2}
@@ -74,10 +74,10 @@ const styles = StyleSheet.create({
         fontSize: 30
     },
     btn2: {
-        backgroundColor: 'red',
+        backgroundColor: 'black',
         padding: 15,
         borderRadius: 7,
-        borderColor: 'black',
+        borderColor: 'white',
         borderWidth: 1,
         height: 60,
         width: 200,
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
         marginRight: 40,
     },
     btn1: {
-        backgroundColor: 'green',
+        backgroundColor: 'white',
         padding: 15,
         borderRadius: 7,
         borderColor: 'black',
@@ -101,6 +101,11 @@ const styles = StyleSheet.create({
         color: 'white',
         fontSize: 22,
         textAlign: 'center',
+    },
+    submitBtnText1: {
+        color: 'black',
+        fontSize: 22,
+        alignSelf: 'center'
     },
     viewStyle: {
         padding: 50,
