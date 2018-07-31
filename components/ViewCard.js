@@ -54,11 +54,13 @@ class ViewCard extends React.Component {
                     onPress={this.addCard}>
                     <Text style={styles.submitBtnText1}>Add Card</Text>
                 </TouchableOpacity>
+                    {data[header].questions.length > 0 && (
                 <TouchableOpacity
                     style={styles.btn2}
                     onPress={this.onStartQuiz}>
                     <Text style={styles.submitBtnText}>Start Quiz</Text>
                 </TouchableOpacity>
+                    )}
                 </View>
                 </View>
                 )}

@@ -103,19 +103,17 @@ class QuesCard extends React.Component {
         showAnswer: false,
         flipValue: 0,
     }
-    showAnswer = () => {
 
-    };
     onPress = (val) => {
         const { data } = this.props;
         const { header }  = this.props.navigation.state.params;
         const questions  = data[header].questions;
-        const answer = questions[this.state.quesNo-1].answer;
         const { correctAnswer, wrongAnswer, quesNo } = this.state;
         let ans = correctAnswer;
         let wrong = wrongAnswer;
         this.setState({flipValue: 0});
-        if ( val == answer) {
+        console.log('val', val);
+        if (val) {
             ans = ans + 1;
             this.setState({correctAnswer: correctAnswer + 1});
         } else {

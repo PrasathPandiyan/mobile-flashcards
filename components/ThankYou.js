@@ -14,8 +14,10 @@ function FlashCardStatusBar ({backgroundColor, ...props}) {
 export default class ThankYou extends React.Component {
 
     backToDeck = () => {
+        const { header }  = this.props.navigation.state.params;
         this.props.navigation.navigate(
-            'Home',
+            'Details',
+            { header }
         );
     };
 

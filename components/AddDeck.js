@@ -35,6 +35,7 @@ class AddDeck extends React.Component {
         const { dispatch } = this.props;
         var that = this;
         const key = this.state.text;
+        if(!key) { return alert("Please enter Deck Title")}
         const { data } = this.props.navigation.state.params;
         let data1 = data;
         data1[key] = {title: key, questions: []};
@@ -42,8 +43,8 @@ class AddDeck extends React.Component {
             .then((entries) => dispatch(receiveEntries(entries)))
             .then(({ entries }) => {
                 that.props.navigation.navigate(
-                    'AddCard',
-                    { header: key, data }
+                    'Details',
+                    { header: key }
                 )}
             ));
     }

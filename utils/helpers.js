@@ -8,6 +8,22 @@ export function clearLocalNotification () {
     return AsyncStorage.removeItem(NOTIFICATION_KEY)
         .then(Notifications.cancelAllScheduledNotificationsAsync)
 }
+
+function createNotification () {
+    return {
+        title: 'Log your stats!',
+        body: " Please don't forget to log your stats for today!",
+        ios: {
+            sound: true,
+        },
+        android: {
+            sound: true,
+            priority: 'high',
+            sticky: false,
+            vibrate: true,
+        }
+    }
+}
 export function setLocalNotification () {
     AsyncStorage.getItem(NOTIFICATION_KEY)
         .then(JSON.parse)

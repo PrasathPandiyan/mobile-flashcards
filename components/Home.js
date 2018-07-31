@@ -66,7 +66,7 @@ class Home extends React.Component {
                             'AddDeck',
                             { header: 'NewKey', data }
                         )}>
-                        <Text style={styles.cardHeader}> New Deck </Text>
+                        <Text style={styles.cardHeader}> Add Deck </Text>
                         <Text style={styles.cardCount}>
                             0 card
                         </Text>

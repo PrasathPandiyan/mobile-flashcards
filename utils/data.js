@@ -16,12 +16,12 @@ export function setDummyData () {
             title: 'React',
             questions: [
                 {
-                    question: 'Is React A library for managing user interfaces?',
-                    answer: true
+                    question: 'What is React?',
+                    answer: 'A library for managing user interfaces'
                 },
                 {
-                    question: 'We cannot make Ajax requests componentDidMount lifecycle event in React?',
-                    answer: false
+                    question: 'Where do you make Ajax requests in React?',
+                    answer: 'The componentDidMount lifecycle event'
                 }
             ]
         },
@@ -29,8 +29,8 @@ export function setDummyData () {
             title: 'JavaScript',
             questions: [
                 {
-                    question: 'Is combination of a function and the lexical environment within which that function was declared is called a closure?',
-                    answer: true
+                    question: 'What is a closure?',
+                    answer: 'The combination of a function and the lexical environment within which that function was declared.'
                 }
             ]
         }
