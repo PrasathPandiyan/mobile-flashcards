@@ -9,25 +9,37 @@ This Project was tested in IOS Simulator
 ## Table of Contents
 *App.js - includes StackNavigationCard. on mount sets LocalNotification
 * Components:
-    *StackNavigationCard.js  - This is the jsx file included in App.js. this has stack navigation to multiple routes.
-    *Home.js =- Displays all stack of cards present.
-    *Vieward.js - this displays title and no. of question and allows the user to start the quiz
-    *QuesCard.js - this displays the ques to user and once when user clicks on either Correct or incorrect ( mostly question and answer
-    *AddCardDeck.js - add question and answer to the topic
-    *AddDeck.js - add title of the deck
-    *ThankYou: displays percentage and navigation to respective flows
+*StackNavigationCard.js  - This is the jsx file included in App.js. this has stack navigation to multiple routes.
+
+ *Home.js =- Displays all stack of cards present.
+
+*Vieward.js - this displays title and no. of question and allows the user to start the quiz
+
+*QuesCard.js - this displays the ques to user and once when user clicks on either Correct or incorrect ( mostly question and answer
+
+*AddCardDeck.js - add question and answer to the topic
+
+*AddDeck.js - add title of the deck
+
+*ThankYou: displays percentage and navigation to respective flows
 
 *utils:
-    *api.js: has function to add Deck and getAllData
-    *color.js: has few color codes
-    *data.js: dummy data and if data already there returns the data
-    *helpers.js : has few helper functions
+
+*api.js: has function to add Deck and getAllData
+
+ *color.js: has few color codes
+
+ *data.js: dummy data and if data already there returns the data
+
+ *helpers.js : has few helper functions
 
 *reducers:
-    *index.js - reducer
+
+*index.js - reducer
 
 *actions
-    *index.js - has actions
+
+ *index.js - has actions
 
 is in true or false). it is tested in that way.
 
