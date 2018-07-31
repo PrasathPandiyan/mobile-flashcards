@@ -31,7 +31,7 @@ class Home extends React.Component {
     }
 
     render() {
-        const { data } = this.state;
+        const { data } = this.props;
         let list = [];
         if (data) {
             list = Object.keys(data);

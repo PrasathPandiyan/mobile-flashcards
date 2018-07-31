@@ -112,7 +112,6 @@ class QuesCard extends React.Component {
         let ans = correctAnswer;
         let wrong = wrongAnswer;
         this.setState({flipValue: 0});
-        console.log('val', val);
         if (val) {
             ans = ans + 1;
             this.setState({correctAnswer: correctAnswer + 1});
@@ -121,7 +120,8 @@ class QuesCard extends React.Component {
             this.setState({wrongAnswer: wrongAnswer + 1});
         }
         if (questions.length == (ans + wrong)) {
-            const percentage = ((ans - wrong)/questions.length * 100);
+            const percentage = ((ans)/questions.length * 100);
+            this.setState({quesNo: 1, correctAnswer: 0, wrongAnswer: 0})
             clearLocalNotification()
                 .then(setLocalNotification);
             this.props.navigation.navigate(
@@ -137,7 +137,6 @@ class QuesCard extends React.Component {
         const { header }  = this.props.navigation.state.params;
         const questions  = data[header].questions;
         const { quesNo } = this.state;
-
         return(
             <View style={styles.container}>
                 <FlashCardStatusBar backgroundColor={purple} barStyle="light-content" />

@@ -1,6 +1,6 @@
 import React from 'react';
 import { TouchableHighlight } from 'react-native';
-import { StackNavigator } from 'react-navigation'; // Version can be specified in package.json
+import { createStackNavigator } from 'react-navigation'; // Version can be specified in package.json
 import { black } from '../utils/colors'
 import { Ionicons } from '@expo/vector-icons'
 import Home from './Home';
@@ -16,7 +16,7 @@ const Left = ({ onPress }) => (
     </TouchableHighlight>
 );
 
-export default StackNavigator({
+export default createStackNavigator({
     Home: {
         screen: Home,
         navigationOptions: () => ({
@@ -73,4 +73,7 @@ export default StackNavigator({
             headerLeft: null
         }),
     },
-});
+},
+    {
+        initialRouteName: 'Home',
+    });

@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { View } from 'react-native';
 import reducer from './reducers'
 import { setLocalNotification } from './utils/helpers'
-import StackNavigationCard from './components/StackNavigationCard';
+import Container from './components/Container';
 
 
 export default class App extends React.Component {
@@ -15,7 +15,7 @@ export default class App extends React.Component {
       return (
         <Provider store={createStore(reducer)}>
             <View style={{flex: 1}}>
-            <StackNavigationCard/>
+            <Container/>
             </View>
         </Provider>
 

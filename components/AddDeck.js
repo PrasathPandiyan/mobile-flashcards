@@ -29,14 +29,24 @@ class AddDeck extends React.Component {
 
     state = {
         text: '',
+        data: {},
     };
+    componentDidMount () {
+        const { dispatch } = this.props
+
+        getAllData()
+            .then((entries) => dispatch(receiveEntries(entries)))
+            .then(({ entries }) => {
+                this.setState({data: entries});
+            })
+            .then(() => this.setState(() => ({ready: true})))
+    }
 
     submit = () => {
-        const { dispatch } = this.props;
+        const { dispatch, data } = this.props;
         var that = this;
         const key = this.state.text;
         if(!key) { return alert("Please enter Deck Title")}
-        const { data } = this.props.navigation.state.params;
         let data1 = data;
         data1[key] = {title: key, questions: []};
         addDeck(data1).then((val) =>  getAllData()
@@ -117,9 +127,9 @@ const styles = StyleSheet.create({
     }
 });
 
-function mapStateToProps (entries) {
+function mapStateToProps (data) {
     return {
-        entries
+        data
     }
 }
 

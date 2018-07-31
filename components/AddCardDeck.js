@@ -42,7 +42,7 @@ class AddCardDeck extends React.Component {
         var that = this;
         const { header, data } = this.props.navigation.state.params;
         const {question, answer } = this.state;
-        if(!question && !answer) { return alert("Please fill all the inputs")}
+        if(!question || !answer) { return alert("Please fill all the inputs")}
         let data1 = data;
         data1[header].questions.push({question,  answer});
         addDeck(data1).then((val) =>  getAllData()
